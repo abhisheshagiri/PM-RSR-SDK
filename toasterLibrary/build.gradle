@@ -6,11 +6,11 @@ plugins {
 
 android {
     namespace 'com.example.pm.toasterlibrary'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         minSdk 24
-        targetSdk 32
+        targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -49,7 +49,7 @@ afterEvaluate {
 
                 groupId = 'com.github.abhisheshagiri'
                 artifactId = 'pm-rsr-demo-sdk'
-                version = '1.0.0'
+                version = '1.0.2'
             }
         }
     }
