@@ -1,4 +1,4 @@
-package com.example.pm.toasterlibrary
+package com.example.pm.rsrsdk
 
 import org.junit.Test
 

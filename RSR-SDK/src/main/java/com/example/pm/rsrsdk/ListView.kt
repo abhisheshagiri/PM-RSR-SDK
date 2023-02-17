@@ -1,4 +1,4 @@
-package com.example.pm.toasterlibrary
+package com.example.pm.rsrsdk
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
