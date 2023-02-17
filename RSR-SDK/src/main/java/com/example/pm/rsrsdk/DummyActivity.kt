@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight.Companion.Bold
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.rsr_library.theme.RSRSDKTheme
@@ -97,7 +98,13 @@ fun VenueRow(venue: Venues, onClick: (msg: String) -> Unit) {
     Column(modifier = Modifier
         .padding(start = 10.dp, end = 10.dp, top = 5.dp, bottom = 5.dp)
         .clickable { onClick(venue.title) }) {
-        Text(venue.title, fontSize = 18.sp)
+        Text(venue.title, fontSize = 18.sp, color = Color.Black)
         Text(venue.subtitle, color = Color.Gray)
     }
+}
+
+@Preview
+@Composable
+fun ComposablePreview() {
+    VenueList(venues)
 }
