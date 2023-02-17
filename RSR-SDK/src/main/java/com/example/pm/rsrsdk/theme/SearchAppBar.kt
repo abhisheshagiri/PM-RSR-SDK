@@ -1,4 +1,4 @@
-package com.example.rsr_sdk.ui.theme
+package com.example.pm.rsrsdk.theme
 
 import android.view.KeyEvent
 import androidx.compose.foundation.background
@@ -19,9 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import androidx.compose.runtime.*
-import androidx.compose.ui.res.stringResource
-import com.example.rsr_sdk.R
+import com.example.pm.rsrsdk.R
 
 @Composable
 fun SearchAppBar(modifier: Modifier = Modifier, value: String,

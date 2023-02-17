@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight.Companion.Bold
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.rsr_library.theme.RSRSDKTheme
-import com.example.rsr_sdk.ui.theme.SearchAppBar
+import com.example.pm.rsrsdk.theme.SearchAppBar
 
 class DummyActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
