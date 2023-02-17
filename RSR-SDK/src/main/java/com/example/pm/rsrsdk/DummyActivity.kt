@@ -98,7 +98,7 @@ fun VenueRow(venue: Venues, onClick: (msg: String) -> Unit) {
     Column(modifier = Modifier
         .padding(start = 10.dp, end = 10.dp, top = 5.dp, bottom = 5.dp)
         .clickable { onClick(venue.title) }) {
-        Text(venue.title, fontSize = 18.sp, color = Color.Red)
+        Text(venue.title, fontSize = 18.sp, color = Color.Black)
         Text(venue.subtitle, color = Color.Gray)
     }
 }
