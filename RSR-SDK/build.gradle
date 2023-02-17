@@ -32,9 +32,6 @@ android {
     buildFeatures {
         compose true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion '1.2.0'
-    }
     packagingOptions {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
@@ -64,7 +61,7 @@ afterEvaluate {
 
                 groupId = 'com.github.abhisheshagiri'
                 artifactId = 'pm-rsr-demo-sdk'
-                version = '1.0.7'
+                version = '1.0.8'
             }
         }
     }
