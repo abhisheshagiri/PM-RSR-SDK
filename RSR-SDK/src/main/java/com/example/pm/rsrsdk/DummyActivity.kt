@@ -3,6 +3,7 @@ package com.example.pm.rsrsdk
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -12,6 +13,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight.Companion.Bold
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -79,18 +81,23 @@ val venues = listOf(
 )
 
 @Composable
-fun VenueList(students: List<Venues>) {
+fun VenueList(venues: List<Venues>) {
+    val context = LocalContext.current
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-        students.forEach { student ->
-            StudentRow(student)
+        venues.forEach { venues ->
+            VenueRow(venues) {
+                ToasterMsg.toastMessage(context = context, venues.title)
+            }
         }
     }
 }
 
 @Composable
-fun StudentRow(student: Venues) {
-    Column(modifier = Modifier.padding(start = 10.dp, end = 10.dp, top = 5.dp, bottom = 5.dp)) {
-        Text(student.title, fontSize = 18.sp)
-        Text(student.subtitle, color = Color.Gray)
+fun VenueRow(venue: Venues, onClick: (msg: String) -> Unit) {
+    Column(modifier = Modifier
+        .padding(start = 10.dp, end = 10.dp, top = 5.dp, bottom = 5.dp)
+        .clickable { onClick(venue.title) }) {
+        Text(venue.title, fontSize = 18.sp)
+        Text(venue.subtitle, color = Color.Gray)
     }
 }
