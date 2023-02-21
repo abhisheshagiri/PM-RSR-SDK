@@ -53,14 +53,14 @@ afterEvaluate {
 
 8. After pushing the project on Github, we need to create a release tag by following the steps below
 
-  a. click on “Releases” on the right side of the screen on the GitHub repo
+  i. click on “Releases” on the right side of the screen on the GitHub repo
 
-  b. Enter the release name and all other details required and Click on Publish Release
+  ii. Enter the release name and all other details required and Click on Publish Release
 
-  c. After creating a release, it should be set to the latest on that branch
+  iii. After creating a release, it should be set to the latest on that branch
 
-  d. Now to generate the SDK, go to the Jitpack.io website and enter the link to the Github repo which would then fetch all the release tags associated with that repo
+  iv. Now to generate the SDK, go to the Jitpack.io website and enter the link to the Github repo which would then fetch all the release tags associated with that repo
  
-  e. Now click on “Get it” to start generating the artifact for the latest tag. If the artifacts are generated without errors, there will be a “Green File Icon” that would be shown under “Log” for that version with detailed instruction on how to import it
+  v. Now click on “Get it” to start generating the artifact for the latest tag. If the artifacts are generated without errors, there will be a “Green File Icon” that would be shown under “Log” for that version with detailed instruction on how to import it
 
 
