@@ -64,3 +64,5 @@ afterEvaluate {
 &emsp;&emsp;e. Now click on “Get it” to start generating the artifact for the latest tag. If the artifacts are generated without errors, there will be a “Green File Icon” that would be shown under “Log” for that version with detailed instruction on how to import it
 
 
+## Read full here
+https://parkmobileus.atlassian.net/wiki/spaces/TEAM/pages/3102244885/How+to+develop+an+SDK+or+library+using+Android+Studio
