@@ -14,7 +14,7 @@ class ListView: AppCompatActivity() {
 
         val extras = intent.extras
         val stringVal = extras!!.getString("KEY")
-        val listVal = extras.getString("ARRAYLIST")
+        val listVal = extras.getStringArrayList("ARRAYLIST")
 
 //        Before
 
