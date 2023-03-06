@@ -6,16 +6,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class ListView: AppCompatActivity() {
-//    private val dummyList = intent.getStringArrayListExtra("listDummy")
-
-    var extras = intent.extras
-    private val dummyString = intent.getStringExtra("stringDummy")
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.list_view)
 
         val arrayAdapter: ArrayAdapter<*>
+
+        val extras = intent.extras
+        val latLong = extras!!.getString("KEY")
 
 //        Before
 
@@ -27,8 +25,6 @@ class ListView: AppCompatActivity() {
 
 //        After
 
-//        val users = arrayOf(dummyList)
-
         val mListView = findViewById<android.widget.ListView>(R.id.userlist)
         arrayAdapter = ArrayAdapter(
             this,
@@ -37,7 +33,7 @@ class ListView: AppCompatActivity() {
         mListView.adapter = arrayAdapter
 
         val dummyTextView = findViewById<TextView>(R.id.testName)
-        dummyTextView.text = extras!!.getString("KEY")
+        dummyTextView.text = latLong
 
     }
 }
