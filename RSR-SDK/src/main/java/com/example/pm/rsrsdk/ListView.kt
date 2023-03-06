@@ -13,17 +13,19 @@ class ListView: AppCompatActivity() {
         val arrayAdapter: ArrayAdapter<*>
 
         val extras = intent.extras
-        val latLong = extras!!.getString("KEY")
+        val stringVal = extras!!.getString("KEY")
+        val listVal = extras!!.getString("ARRAYLIST")
 
 //        Before
 
-        val users = arrayOf(
-            "One", "Two", "Three",
-            "Four", "Five", "Six", "Seven", "Eight",
-            "Nine", "Ten"
-        )
+//        val users = arrayOf(
+//            "One", "Two", "Three",
+//            "Four", "Five", "Six", "Seven", "Eight",
+//            "Nine", "Ten"
+//        )
 
 //        After
+        val users = arrayOf(listVal)
 
         val mListView = findViewById<android.widget.ListView>(R.id.userlist)
         arrayAdapter = ArrayAdapter(
@@ -33,7 +35,7 @@ class ListView: AppCompatActivity() {
         mListView.adapter = arrayAdapter
 
         val dummyTextView = findViewById<TextView>(R.id.testName)
-        dummyTextView.text = latLong
+        dummyTextView.text = stringVal
 
     }
 }
