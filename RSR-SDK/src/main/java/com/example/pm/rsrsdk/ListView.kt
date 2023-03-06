@@ -14,7 +14,7 @@ class ListView: AppCompatActivity() {
 
         val extras = intent.extras
         val stringVal = extras!!.getString("KEY")
-        val listVal = extras!!.getString("ARRAYLIST")
+        val listVal = extras.getString("ARRAYLIST")
 
 //        Before
 
@@ -25,7 +25,7 @@ class ListView: AppCompatActivity() {
 //        )
 
 //        After
-        val users = arrayOf(listVal)
+        val users = arrayListOf(listVal)
 
         val mListView = findViewById<android.widget.ListView>(R.id.userlist)
         arrayAdapter = ArrayAdapter(
