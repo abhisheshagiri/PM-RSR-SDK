@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 class ListView: AppCompatActivity() {
 //    private val dummyList = intent.getStringArrayListExtra("listDummy")
+
+    var extras = intent.extras
     private val dummyString = intent.getStringExtra("stringDummy")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +37,7 @@ class ListView: AppCompatActivity() {
         mListView.adapter = arrayAdapter
 
         val dummyTextView = findViewById<TextView>(R.id.testName)
-        dummyTextView.text = dummyString
+        dummyTextView.text = extras!!.getString("KEY")
 
     }
 }
