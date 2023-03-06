@@ -25,15 +25,23 @@ class ListView: AppCompatActivity() {
 //        )
 
 //        After
-        for (i in 1..5) {
-            dummyList = arrayListOf("$stringVal $i in the list")
-        }
-
+        val users = arrayOf(
+            "$stringVal 1 in the list",
+            "$stringVal 2 the list",
+            "$stringVal 3 the list",
+            "$stringVal 4 the list",
+            "$stringVal 5 the list",
+            "$stringVal 6 the list",
+            "$stringVal 7 the list",
+            "$stringVal 8 the list",
+            "$stringVal 9 the list",
+            "$stringVal 10 the list",
+        )
 
         val mListView = findViewById<android.widget.ListView>(R.id.userlist)
         arrayAdapter = ArrayAdapter(
             this,
-            android.R.layout.simple_list_item_1, dummyList
+            android.R.layout.simple_list_item_1, users
         )
         mListView.adapter = arrayAdapter
 
