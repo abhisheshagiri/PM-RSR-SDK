@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class ListView: AppCompatActivity() {
-    private val dummyList = intent.getStringArrayListExtra("listDummy")
+//    private val dummyList = intent.getStringArrayListExtra("listDummy")
     private val dummyString = intent.getStringExtra("stringDummy")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,15 +17,15 @@ class ListView: AppCompatActivity() {
 
 //        Before
 
-//        val users = arrayOf(
-//            "One", "Two", "Three",
-//            "Four", "Five", "Six", "Seven", "Eight",
-//            "Nine", "Ten"
-//        )
+        val users = arrayOf(
+            "One", "Two", "Three",
+            "Four", "Five", "Six", "Seven", "Eight",
+            "Nine", "Ten"
+        )
 
 //        After
 
-        val users = arrayOf(dummyList)
+//        val users = arrayOf(dummyList)
 
         val mListView = findViewById<android.widget.ListView>(R.id.userlist)
         arrayAdapter = ArrayAdapter(
